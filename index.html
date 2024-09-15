@@ -11,8 +11,8 @@
         :root {
             --navy-blue: #001f3f;
             --light-gray: #f0f0f0;
-            --light-cream: #fdf5e6; /* Light creamish color */
-            --bright-yellow: #ffeb3b; /* Bright color for glowing effect */
+            --light-cream: #fdf5e6;
+            --bright-yellow: #ffeb3b;
         }
 
         .text-navy-blue { color: var(--navy-blue); }
@@ -20,14 +20,12 @@
         .bg-light-gray { background-color: var(--light-gray); }
         .bg-light-cream { background-color: var(--light-cream); }
 
-        /* Arabic text style */
         .arabic-text {
             font-family: 'Madinah', sans-serif;
             font-size: 1.5rem;
             direction: rtl;
         }
 
-        /* Style for the academy name */
         .academy-name {
             background-color: var(--navy-blue);
             color: white;
@@ -37,36 +35,27 @@
             border-radius: 5px;
         }
 
-        /* Button styling with glowing effect */
         .interactive-button {
             background-color: var(--navy-blue);
             color: white;
-            padding: 12px 24px; /* Increased padding */
+            padding: 12px 24px;
             font-size: 1.2rem;
             border-radius: 30px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease-in-out;
-            margin-top: 30px; /* Added space above */
-            margin-bottom: 30px; /* Increased space below */
+            margin-top: 30px;
+            margin-bottom: 40px; /* Increased bottom margin */
             display: inline-block;
-            box-shadow: 0 0 15px 5px var(--bright-yellow); /* Glowing effect */
-            overflow: visible; /* Ensure content is not cut off */
+            box-shadow: 0 0 15px 5px var(--bright-yellow);
+            overflow: visible;
         }
 
         .interactive-button:hover {
             background-color: #003366;
             transform: scale(1.05);
-            box-shadow: 0 0 20px 10px var(--bright-yellow); /* Increased glowing on hover */
+            box-shadow: 0 0 20px 10px var(--bright-yellow);
         }
 
-        /* Divider styling */
-        .divider {
-            height: 1px;
-            background-color: #ccc;
-            margin: 30px 0; /* Increased margin for better spacing */
-        }
-
-        /* Two-column layout for Vision and Mission */
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -75,48 +64,39 @@
 
         @media (max-width: 768px) {
             .grid-container {
-                grid-template-columns: 1fr; /* Stacks columns on mobile */
+                grid-template-columns: 1fr;
             }
         }
 
-        /* New section for testimonials */
         .testimonials-section {
             padding: 20px 0;
         }
 
         .testimonials-section h2 {
-            margin-bottom: 20px; /* Adjusted margin for better spacing */
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-    <!-- Header -->
     <header class="py-8">
         <div class="max-w-4xl mx-auto text-center px-4">
             <h1 class="text-4xl academy-name mb-4">Al Fawz Ul Kabeer Academy</h1>
             <p class="arabic-text mb-6">عَنْ أَنَسِ بْنِ مَالِكٍ قَالَ قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</p>
-            <p class="text-lg italic">Anas ibn Malik reported: The Messenger of Allah, peace and blessings be upon him, said, “Seeking knowledge is an obligation upon every Muslim.”</p>
+            <p class="text-lg italic">Anas ibn Malik reported: The Messenger of Allah, peace and blessings be upon him, said, "Seeking knowledge is an obligation upon every Muslim."</p>
             <p class="mt-2">Source: Sunan Ibn Mājah 224 | Grade: Sahih (authentic) according to Al-Albani</p>
 
-            <!-- Interactive Button with Glowing Effect -->
             <a href="https://www.alfawzulkabeer.com/courses_1/islamic-courses" class="interactive-button">Explore Our Courses</a>
         </div>
     </header>
 
-    <!-- Divider -->
-    <div class="divider max-w-4xl mx-auto"></div>
-
-    <!-- Vision and Mission Section in Two Columns -->
-    <section class="max-w-6xl mx-auto py-12 px-4">
+    <section class="max-w-6xl mx-auto pt-4 pb-12 px-4"> <!-- Adjusted padding-top -->
         <div class="grid-container">
-            <!-- Vision Section with Light Creamish Background -->
             <div class="bg-light-cream p-6 shadow-md rounded-lg">
                 <h2 class="text-3xl font-bold text-center mb-6">VISION</h2>
-                <p class="text-lg">To empower every Muslim & Muslimah by following Qur’an & Sunnah to be successful in both the worlds.</p>
+                <p class="text-lg">To empower every Muslim & Muslimah by following Qur'an & Sunnah to be successful in both the worlds.</p>
             </div>
 
-            <!-- Mission Section with White Background -->
             <div class="bg-white p-6 shadow-md rounded-lg">
                 <h2 class="text-3xl font-bold text-center mb-6">MISSION</h2>
                 <ul class="list-disc space-y-4 pl-6 text-lg">
@@ -128,13 +108,11 @@
         </div>
     </section>
 
-    <!-- New Section: Student Testimonials -->
     <section class="max-w-4xl mx-auto py-12 px-4 text-center testimonials-section">
         <h2 class="text-3xl font-bold mb-6">What Our Students Have to Say</h2>
         <!-- Insert Google Reviews component here -->
     </section>
 
-    <!-- CommonNinja Component -->
     <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
     <div class="commonninja_component pid-e663a40f-db95-4973-a4d6-975198b74559"></div>
 
