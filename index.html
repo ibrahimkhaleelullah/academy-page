@@ -47,9 +47,10 @@
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease-in-out;
             margin-top: 30px; /* Added space above */
-            margin-bottom: 5px; /* Reduced space below to be closer to the divider */
+            margin-bottom: 20px; /* Increased space below to avoid overlap */
             display: inline-block;
             box-shadow: 0 0 15px 5px var(--bright-yellow); /* Glowing effect */
+            overflow: hidden; /* Ensure no content overflow */
         }
 
         .interactive-button:hover {
@@ -62,7 +63,7 @@
         .divider {
             height: 1px;
             background-color: #ccc;
-            margin: 10px 0; /* Adjusted margin */
+            margin: 20px 0; /* Adjusted margin for better spacing */
         }
 
         /* Two-column layout for Vision and Mission */
@@ -76,6 +77,15 @@
             .grid-container {
                 grid-template-columns: 1fr; /* Stacks columns on mobile */
             }
+        }
+
+        /* New section for testimonials */
+        .testimonials-section {
+            padding: 20px 0;
+        }
+
+        .testimonials-section h2 {
+            margin-bottom: 20px; /* Adjusted margin for better spacing */
         }
     </style>
 </head>
@@ -119,8 +129,8 @@
     </section>
 
     <!-- New Section: Student Testimonials -->
-    <section class="max-w-4xl mx-auto py-12 px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6">Hear From Our Students</h2>
+    <section class="max-w-4xl mx-auto py-12 px-4 text-center testimonials-section">
+        <h2 class="text-3xl font-bold mb-6">What Our Students Have to Say</h2>
         <!-- Insert Google Reviews component here -->
     </section>
 
